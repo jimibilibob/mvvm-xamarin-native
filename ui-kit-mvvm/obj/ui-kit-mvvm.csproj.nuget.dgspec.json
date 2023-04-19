@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/user/Projects/ui-kit-mvvm/ui-kit-mvvm/ui-kit-mvvm.csproj": {}
+  },
+  "projects": {
+    "/Users/user/Projects/ui-kit-mvvm/ui-kit-mvvm/ui-kit-mvvm.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/user/Projects/ui-kit-mvvm/ui-kit-mvvm/ui-kit-mvvm.csproj",
+        "projectName": "ui_kit_mvvm",
+        "projectPath": "/Users/user/Projects/ui-kit-mvvm/ui-kit-mvvm/ui-kit-mvvm.csproj",
+        "packagesPath": "/Users/user/.nuget/packages/",
+        "outputPath": "/Users/user/Projects/ui-kit-mvvm/ui-kit-mvvm/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/user/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid13.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid13.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid13.0": {
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Xamarin.AndroidX.AppCompat": {
+              "target": "Package",
+              "version": "[1.2.0.5, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
+            "Xamarin.Google.Android.Material": {
+              "target": "Package",
+              "version": "[1.0.0.1, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}
