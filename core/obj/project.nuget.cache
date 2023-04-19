@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bfok8W3PlV45sMH3vBOTlwFAEagi/qFgzGxE2e6oj+E8rL4OL7uIgynpnppEy6vScP0NWgkGzDrJGwe4osPk2A==",
+  "success": true,
+  "projectFilePath": "/Users/user/Projects/ui-kit-mvvm/core/core.csproj",
+  "expectedPackageFiles": [
+    "/Users/user/.nuget/packages/communitytoolkit.mvvm/8.1.0/communitytoolkit.mvvm.8.1.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/netstandard.library.ref/2.1.0/netstandard.library.ref.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

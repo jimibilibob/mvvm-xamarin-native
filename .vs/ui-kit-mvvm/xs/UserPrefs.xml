@@ -1,12 +1,7 @@
 ﻿<Properties StartupConfiguration="{183BC600-2C82-4B14-96A1-59C77390C248}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ui-kit-mvvm AndroidDesignerPreferredTheme="AppTheme" AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Pixel_4_API_33" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_4_API_33" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.core FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.ui-kit-mvvm AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="AppTheme" PreferredExecutionTarget="Android.Pixel_4_API_31" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ui-kit-mvvm/MainActivity.cs">
     <Files>
       <File FileName="ui-kit-mvvm/ViewModels/MainViewModel.cs" Line="13" Column="30" />
@@ -31,5 +26,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_4_API_33" />
+  <MonoDevelop.Ide.ItemProperties.ui-kit-mvvm-ios FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

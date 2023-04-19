@@ -4,6 +4,7 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "ui_kit_mvvm.dll" comes first in this list. */
 		"ui_kit_mvvm.dll",
 		"CommunityToolkit.Mvvm.dll",
+		"core.dll",
 		"Microsoft.Extensions.DependencyInjection.Abstractions.dll",
 		"Microsoft.Extensions.DependencyInjection.dll",
 		"Xamarin.AndroidX.Activity.dll",

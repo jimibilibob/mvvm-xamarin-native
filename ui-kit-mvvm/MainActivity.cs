@@ -8,9 +8,9 @@ using AndroidX.AppCompat.App;
 using Google.Android.Material.FloatingActionButton;
 using Google.Android.Material.Snackbar;
 using Android.Widget;
-using ui_kit_mvvm.ViewModels;
+using Core.ViewModels;
 using System.ComponentModel;
-using ui_kit_mvvm.IoC;
+using Core.IoC;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ui_kit_mvvm

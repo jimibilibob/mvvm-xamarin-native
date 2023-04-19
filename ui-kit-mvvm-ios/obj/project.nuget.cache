@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "cRCsWQembo2zqdYhQI1ywy/5GK2MmzdXNvq85RCrsU7uetX/ukwqtGFoVbm5cm/9eDVDboZXG/b1XvuY8C/O8w==",
+  "success": true,
+  "projectFilePath": "/Users/user/Projects/ui-kit-mvvm/ui-kit-mvvm-ios/ui-kit-mvvm-ios.csproj",
+  "expectedPackageFiles": [
+    "/Users/user/.nuget/packages/communitytoolkit.mvvm/8.1.0/communitytoolkit.mvvm.8.1.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/Users/user/.nuget/packages/xamarin.essentials/1.6.1/xamarin.essentials.1.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}
