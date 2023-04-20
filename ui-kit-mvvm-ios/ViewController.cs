@@ -29,8 +29,10 @@ namespace ui_kit_mvvm_ios
             Vm.PropertyChanged += onPropertyChanged;
             fabButton.TouchUpInside += (sender, args) =>
             {
-                Vm.hasLoadedCommand.Execute(null);
+                //Vm.hasLoadedCommand.Execute(null);
             };
+
+            Vm.GetUsersCommand.Execute(null);
         }
 
         public override void DidReceiveMemoryWarning ()
@@ -64,13 +66,18 @@ namespace ui_kit_mvvm_ios
             {
                 progressIndicator.Hidden = true;
                 progressIndicator.StopAnimating();
-                Vm.updateMessageCommand.Execute("Data Loaded!");
+                messageLabel.Hidden = true;
                 return;
             }
             progressIndicator.StartAnimating();
             progressIndicator.Hidden = false;
             messageLabel.Text = Vm.Message;
-            Vm.updateMessageCommand.Execute("Loading");
+            Vm.updateMessageCommand.Execute("Loading ...");
+        }
+
+        private void onUsersChanged()
+        {
+            
         }
     }
 }

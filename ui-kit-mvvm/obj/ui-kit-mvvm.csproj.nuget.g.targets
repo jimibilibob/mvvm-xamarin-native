@@ -42,6 +42,7 @@
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.appcompat/1.2.0.5/buildTransitive/monoandroid90/Xamarin.AndroidX.AppCompat.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.appcompat/1.2.0.5/buildTransitive/monoandroid90/Xamarin.AndroidX.AppCompat.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.google.android.material/1.0.0.1/buildTransitive/monoandroid90/Xamarin.Google.Android.Material.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.google.android.material/1.0.0.1/buildTransitive/monoandroid90/Xamarin.Google.Android.Material.targets')" />
     <Import Project="$(NuGetPackageRoot)xamarin.androidx.browser/1.3.0/buildTransitive/monoandroid90/Xamarin.AndroidX.Browser.targets" Condition="Exists('$(NuGetPackageRoot)xamarin.androidx.browser/1.3.0/buildTransitive/monoandroid90/Xamarin.AndroidX.Browser.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.text.json/7.0.2/buildTransitive/netstandard2.0/System.Text.Json.targets" Condition="Exists('$(NuGetPackageRoot)system.text.json/7.0.2/buildTransitive/netstandard2.0/System.Text.Json.targets')" />
     <Import Project="$(NuGetPackageRoot)communitytoolkit.mvvm/8.1.0/buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets" Condition="Exists('$(NuGetPackageRoot)communitytoolkit.mvvm/8.1.0/buildTransitive/netstandard2.1/CommunityToolkit.Mvvm.targets')" />
   </ImportGroup>
 </Project>

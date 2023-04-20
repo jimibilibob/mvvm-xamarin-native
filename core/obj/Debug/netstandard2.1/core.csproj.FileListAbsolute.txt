@@ -1,9 +1,9 @@
 /Users/user/Projects/ui-kit-mvvm/core/bin/Debug/netstandard2.1/core.deps.json
 /Users/user/Projects/ui-kit-mvvm/core/bin/Debug/netstandard2.1/core.dll
 /Users/user/Projects/ui-kit-mvvm/core/bin/Debug/netstandard2.1/core.pdb
-/Users/user/Projects/ui-kit-mvvm/core/obj/Debug/netstandard2.1/core.csproj.AssemblyReference.cache
 /Users/user/Projects/ui-kit-mvvm/core/obj/Debug/netstandard2.1/core.AssemblyInfoInputs.cache
 /Users/user/Projects/ui-kit-mvvm/core/obj/Debug/netstandard2.1/core.AssemblyInfo.cs
 /Users/user/Projects/ui-kit-mvvm/core/obj/Debug/netstandard2.1/core.csproj.CoreCompileInputs.cache
 /Users/user/Projects/ui-kit-mvvm/core/obj/Debug/netstandard2.1/core.dll
 /Users/user/Projects/ui-kit-mvvm/core/obj/Debug/netstandard2.1/core.pdb
+/Users/user/Projects/ui-kit-mvvm/core/obj/Debug/netstandard2.1/core.csproj.AssemblyReference.cache

@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.DependencyInjection;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Extensions.DependencyInjection;
 using Core.ViewModels;
+using core.Repository;
 
 namespace Core.IoC
 {
@@ -41,12 +42,15 @@ namespace Core.IoC
 
 
 
-            //services.AddSingleton<INetworkService, NetworkService>();
-            //services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddSingleton<INetworkService, NetworkService>();
+            services.AddSingleton<IRemoteRepository, RemoteRepository>(s => new RemoteRepository(
+                new NetworkService()
+                ));
 
 
-
-            services.AddTransient<MainViewModel>();
+            services.AddTransient<MainViewModel>(s => new MainViewModel(
+                new RemoteRepository(new NetworkService())
+                ));
 
 
 

@@ -1,34 +1,53 @@
 ﻿<Properties StartupConfiguration="{183BC600-2C82-4B14-96A1-59C77390C248}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.core FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.ui-kit-mvvm AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="AppTheme" PreferredExecutionTarget="Android.Pixel_4_API_31" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ui-kit-mvvm/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="core/ViewModels/MainViewModel.cs">
     <Files>
-      <File FileName="ui-kit-mvvm/ViewModels/MainViewModel.cs" Line="13" Column="30" />
-      <File FileName="ui-kit-mvvm/MainActivity.cs" Line="86" Column="33" />
-      <File FileName="ui-kit-mvvm/Resources/layout/content_main.xml" Line="17" Column="41" />
+      <File FileName="ui-kit-mvvm/MainActivity.cs" Line="124" Column="29" />
+      <File FileName="core/ViewModels/MainViewModel.cs" Line="54" Column="10" />
+      <File FileName="ui-kit-mvvm-ios/ViewController.cs" Line="13" Column="84" />
+      <File FileName="ui-kit-mvvm/Resources/layout/content_main.xml" Line="31" Column="29" />
+      <File FileName="ui-kit-mvvm/Adapters/UserAdapter.cs" Line="42" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ui-kit-mvvm" expanded="True">
-            <Node name="ui-kit-mvvm" expanded="True">
+            <Node name="core" expanded="True">
+              <Node name="Dependencies" expanded="True" />
               <Node name="IoC" expanded="True" />
-              <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True">
-                  <Node name="activity_main.xml" selected="True" />
-                </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="MainViewModel.cs" selected="True" />
               </Node>
-              <Node name="ViewModels" expanded="True" />
+            </Node>
+            <Node name="ui-kit-mvvm" expanded="True">
+              <Node name="References" expanded="True" />
+              <Node name="Adapters" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+                <Node name="layout" expanded="True" />
+                <Node name="values" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="ui-kit-mvvm-ios" expanded="True">
+              <Node name="References" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_4_API_33" />
-  <MonoDevelop.Ide.ItemProperties.ui-kit-mvvm-ios FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_4_API_31" />
+  <MonoDevelop.Ide.ItemProperties.ui-kit-mvvm-ios PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.659E15AA-EE25-4398-8D34-C7E1CF8619BC" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/user/Projects/ui-kit-mvvm/core/Repository/RemoteRepository.cs" relfile="core/Repository/RemoteRepository.cs" line="29" column="1" />
+      <Breakpoint file="/Users/user/Projects/ui-kit-mvvm/core/Repository/RemoteRepository.cs" relfile="core/Repository/RemoteRepository.cs" line="43" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="13.2.0.0" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

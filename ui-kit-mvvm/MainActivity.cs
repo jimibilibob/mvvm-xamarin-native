@@ -12,6 +12,10 @@ using Core.ViewModels;
 using System.ComponentModel;
 using Core.IoC;
 using Microsoft.Extensions.DependencyInjection;
+using AndroidX.RecyclerView.Widget;
+using ui_kit_mvvm.Adapters;
+using System.Collections.Generic;
+using core.Models;
 
 namespace ui_kit_mvvm
 {
@@ -25,6 +29,7 @@ namespace ui_kit_mvvm
         LinearLayout loadingContainer;
         ProgressBar progressBar;
         TextView message;
+        RecyclerView usersList;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,7 +49,13 @@ namespace ui_kit_mvvm
             progressBar = loadingContainer.FindViewById<ProgressBar>(Resource.Id.progress_bar);
             message = loadingContainer.FindViewById<TextView>(Resource.Id.Message);
 
+            usersList = FindViewById<RecyclerView>(Resource.Id.RvUsers);
+
+            setUpRecyclerView();
+
             Vm.PropertyChanged += onPropertyChanged;
+
+            Vm.GetUsersCommand.Execute(null);
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -64,12 +75,20 @@ namespace ui_kit_mvvm
             return base.OnOptionsItemSelected(item);
         }
 
+        private void setUpRecyclerView()
+        {
+            var mLayout = new LinearLayoutManager(this);
+            usersList.SetLayoutManager(mLayout);
+
+            var mAdapter = new UserAdapter(Vm.Users);
+            usersList.SetAdapter(mAdapter);
+        }
+
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
-            Vm.hasLoadedCommand.Execute(null);
-            //View view = (View) sender;
-            //Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
-            //    .SetAction("Action", (View.IOnClickListener)null).Show();
+            View view = (View)sender;
+            Snackbar.Make(view, "Replace with your own action", Snackbar.LengthLong)
+                .SetAction("Action", (View.IOnClickListener)null).Show();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -88,6 +107,9 @@ namespace ui_kit_mvvm
                 case "IsLoaded":
                     onIsLoadedChanged();
                     break;
+                case "Users":
+                    onUsersChanged();
+                    break;
             }
         }
 
@@ -102,12 +124,17 @@ namespace ui_kit_mvvm
             if (Vm.IsLoaded)
             {
                 progressBar.Visibility = ViewStates.Invisible;
-                Vm.updateMessageCommand.Execute("Data Loaded!");
+                message.Visibility = ViewStates.Invisible;
                 return;
             }
             progressBar.Visibility = ViewStates.Visible;
             message.Text = Vm.Message;
-            Vm.updateMessageCommand.Execute("Loading");
+            Vm.updateMessageCommand.Execute("Loading ...");
+        }
+
+        private void onUsersChanged()
+        {
+            (usersList.GetAdapter() as UserAdapter).UpdateList(Vm.Users);
         }
 	}
 }

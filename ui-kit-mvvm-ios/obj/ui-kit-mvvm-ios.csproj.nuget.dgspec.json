@@ -45,6 +45,10 @@
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             }
           },
           "imports": [
@@ -68,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/Users/user/Library/Caches/VisualStudio/17.0/MSBuild/81219_3/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/user/Library/Caches/VisualStudio/17.0/MSBuild/16582_3/RuntimeIdentifierGraph.json"
         }
       }
     },
