@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,6 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9bs-A0-dAi">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="CSg-Fa-9w7">
                                 <rect key="frame" x="181.66666666666666" y="411" width="30" height="30"/>
                                 <constraints>
@@ -48,13 +54,18 @@
                             <constraint firstItem="CSg-Fa-9w7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LhN-Nc-x7e"/>
                             <constraint firstItem="CSg-Fa-9w7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SKN-cO-Nqd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kI2-kj-79X" secondAttribute="trailing" constant="30" id="VzJ-bI-sC9"/>
+                            <constraint firstItem="9bs-A0-dAi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YMn-MC-sYX"/>
+                            <constraint firstItem="9bs-A0-dAi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bef-uC-8Y2"/>
                             <constraint firstItem="5Aq-CC-NRH" firstAttribute="top" secondItem="CSg-Fa-9w7" secondAttribute="bottom" constant="8" symbolic="YES" id="hqr-ih-sPh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9bs-A0-dAi" secondAttribute="bottom" id="mIU-aQ-CFe"/>
+                            <constraint firstAttribute="trailing" secondItem="9bs-A0-dAi" secondAttribute="trailing" id="uak-ab-BVe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="fabButton" destination="kI2-kj-79X" id="khS-C9-PM6"/>
                         <outlet property="messageLabel" destination="5Aq-CC-NRH" id="dkJ-FZ-cEz"/>
                         <outlet property="progressIndicator" destination="CSg-Fa-9w7" id="1op-AU-oNS"/>
+                        <outlet property="usersTableView" destination="9bs-A0-dAi" id="08y-Bs-GWe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,5 +82,8 @@
     </scenes>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

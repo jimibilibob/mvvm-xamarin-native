@@ -47,6 +47,7 @@ namespace Core.ViewModels
 
         private async Task GetUsersAsync()
         {
+            await Task.Delay(3000);
             var usersResponse = await repository.GetUsers();
 
             Users = usersResponse.Value;

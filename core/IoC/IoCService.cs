@@ -40,19 +40,11 @@ namespace Core.IoC
         {
             var services = new ServiceCollection();
 
-
-
             services.AddSingleton<INetworkService, NetworkService>();
-            services.AddSingleton<IRemoteRepository, RemoteRepository>(s => new RemoteRepository(
-                new NetworkService()
-                ));
 
+            services.AddSingleton<IRemoteRepository, RemoteRepository>();
 
-            services.AddTransient<MainViewModel>(s => new MainViewModel(
-                new RemoteRepository(new NetworkService())
-                ));
-
-
+            services.AddTransient<MainViewModel>();
 
             return services.BuildServiceProvider();
         }

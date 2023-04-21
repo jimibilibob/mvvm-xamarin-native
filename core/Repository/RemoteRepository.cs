@@ -42,11 +42,38 @@ namespace core.Repository
                 return Result.Fail<List<UserResponse>>($"Check your internet connection {ex}");
             }
         }
+
+        public async Task<Result<UserResponse>> GetUserById(int id)
+        {
+            try
+            {
+                var users = await NetworkHandler.GetData<UserResponse>($"https://jsonplaceholder.typicode.com/users/{id}");
+                return Result.Ok(users);
+            }
+            catch (NetworkErrorException ex)
+            {
+                // You can customize the error messages just checking the exceptionCode or just use the exceptionMessage instead (see default case)
+                switch (ex.Code)
+                {
+                    case (int)HttpStatusCode.InternalServerError:
+                        return Result.Fail<UserResponse>("It seems like server is down");
+                    case (int)HttpStatusCode.NotFound:
+                        return Result.Fail<UserResponse>("The user seems to be unavailable right now");
+                    default:
+                        return Result.Fail<UserResponse>(ex.Message ?? "Something went wrong");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Result.Fail<UserResponse>($"Check your internet connection {ex}");
+            }
+        }
     }
 
     public interface IRemoteRepository
     {
         public Task<Result<List<UserResponse>>> GetUsers();
+        public Task<Result<UserResponse>> GetUserById(int id);
     }
 }
 

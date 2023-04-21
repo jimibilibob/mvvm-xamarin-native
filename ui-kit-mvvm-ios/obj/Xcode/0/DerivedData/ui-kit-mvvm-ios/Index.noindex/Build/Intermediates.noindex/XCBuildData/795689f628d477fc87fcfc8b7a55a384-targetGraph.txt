@@ -1,3 +1,0 @@
-Target dependency graph (2 targets)
-ui-kit-mvvm-ios in ui-kit-mvvm-ios, no dependencies
-ui-kit-mvvm-ios in ui-kit-mvvm-ios, no dependencies

@@ -22,6 +22,7 @@ item;obj/Debug/res/menu/menu_main.xml
 item;obj/Debug/res/values/styles.xml
 LinearLayout;obj/Debug/res/drawable/rounded_background.xml
 LinearLayout;obj/Debug/res/layout/content_main.xml
+LinearLayout;obj/Debug/res/layout/fragment_user_detail.xml
 LinearLayout;obj/Debug/res/layout/user_item.xml
 menu;obj/Debug/res/menu/menu_main.xml
 padding;obj/Debug/res/drawable/rounded_background.xml
@@ -39,4 +40,5 @@ string;obj/Debug/res/values/strings.xml
 stroke;obj/Debug/res/drawable/rounded_background.xml
 style;obj/Debug/res/values/styles.xml
 TextView;obj/Debug/res/layout/content_main.xml
+TextView;obj/Debug/res/layout/fragment_user_detail.xml
 TextView;obj/Debug/res/layout/user_item.xml

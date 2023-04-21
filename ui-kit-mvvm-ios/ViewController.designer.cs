@@ -20,9 +20,22 @@ namespace ui_kit_mvvm_ios
 
 		[Outlet]
 		UIKit.UIActivityIndicatorView progressIndicator { get; set; }
+
+		[Outlet]
+		UIKit.UITableView usersTableView { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (usersTableView != null) {
+				usersTableView.Dispose ();
+				usersTableView = null;
+			}
+
+			if (fabButton != null) {
+				fabButton.Dispose ();
+				fabButton = null;
+			}
+
 			if (messageLabel != null) {
 				messageLabel.Dispose ();
 				messageLabel = null;
@@ -31,11 +44,6 @@ namespace ui_kit_mvvm_ios
 			if (progressIndicator != null) {
 				progressIndicator.Dispose ();
 				progressIndicator = null;
-			}
-
-			if (fabButton != null) {
-				fabButton.Dispose ();
-				fabButton = null;
 			}
 		}
 	}

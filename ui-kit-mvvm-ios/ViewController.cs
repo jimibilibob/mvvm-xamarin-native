@@ -1,4 +1,5 @@
-﻿using Core.IoC;
+﻿using core.Models;
+using Core.IoC;
 using Core.ViewModels;
 using Foundation;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +33,10 @@ namespace ui_kit_mvvm_ios
                 //Vm.hasLoadedCommand.Execute(null);
             };
 
+            usersTableView.RegisterNibForCellReuse(UsersTableViewCell.Nib, UsersTableViewCell.Key);
+            usersTableView.DataSource = new HomeViewControllerDataSource(this);
+            usersTableView.Delegate = new HomeViewControllerDelegate(this);
+
             Vm.GetUsersCommand.Execute(null);
         }
 
@@ -50,6 +55,9 @@ namespace ui_kit_mvvm_ios
                     break;
                 case "IsLoaded":
                     onIsLoadedChanged();
+                    break;
+                case "Users":
+                    onUsersChanged();
                     break;
             }
         }
@@ -77,7 +85,50 @@ namespace ui_kit_mvvm_ios
 
         private void onUsersChanged()
         {
-            
+            usersTableView.ReloadData();
+        }
+
+        class HomeViewControllerDataSource : UITableViewDataSource
+        {
+            private ViewController _controller;
+
+            public HomeViewControllerDataSource(ViewController viewController)
+            {
+                _controller = viewController;
+            }
+            public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
+            {
+                UserResponse user = _controller.Vm.Users[indexPath.Row];
+
+                UsersTableViewCell cell = (UsersTableViewCell) tableView.DequeueReusableCell(UsersTableViewCell.Key, indexPath);
+
+                cell.User = user;
+                cell.UpdateViews();
+
+                return cell;
+            }
+
+            public override nint RowsInSection(UITableView tableView, nint section)
+            {
+                return _controller.Vm.Users.Count;
+            }
+
+        }
+
+        class HomeViewControllerDelegate : UITableViewDelegate
+        {
+            ViewController _controller;
+
+            public HomeViewControllerDelegate(ViewController controller)
+            {
+                _controller = controller;
+            }
+
+            [Export("tableView:heightForRowAtIndexPath:")]
+            public override nfloat GetHeightForRow(UITableView tableView, NSIndexPath indexPath)
+            {
+                return 90f;
+            }
         }
     }
 }
